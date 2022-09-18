@@ -12,12 +12,12 @@
    },
    "repository":{
       "type":"git",
-      "url":"git+https://github.com/neoxr/neoxr-bot.git"
+      "url":"git+https://github.com/teamvirtual-skyz/neoxr-bot.git"
    },
    "keywords":[
       "wabot-md"
    ],
-   "author":"Wildan Izzudin",
+   "author":"Putra-Skyz",
    "license":"ISC",
    "dependencies":{
       "@adiwajshing/baileys":"github:neoxr/bails",
