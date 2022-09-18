@@ -10,7 +10,7 @@ exports.run = {
             let q = m.quoted ? m.quoted.message[type] : m.msg
             let img = await client.downloadMediaMessage(q)
             if (/video/.test(type)) {
-               if (q.seconds > 10) return client.reply(m.chat, Func.texted('bold', `🚩 Maximum video duration is 10 seconds.`), m)
+               if (q.seconds > 10) return client.reply(m.chat, Func.texted('bold', `🧸 Maximum video duration is 10 seconds.`), m)
                return await client.sendSticker(m.chat, img, m, {
                   packname: exif.sk_pack,
                   author: exif.sk_author
@@ -32,7 +32,7 @@ exports.run = {
                   author: exif.sk_author
                })
             } else if (/video/.test(mime)) {
-               if ((q.msg || q).seconds > 10) return client.reply(m.chat, Func.texted('bold', `🚩 Maximum video duration is 10 seconds.`), m)
+               if ((q.msg || q).seconds > 10) return client.reply(m.chat, Func.texted('bold', `🧸 Maximum video duration is 10 seconds.`), m)
                let img = await q.download()
                if (!img) return client.reply(m.chat, global.status.wrong, m)
                return await client.sendSticker(m.chat, img, m, {
