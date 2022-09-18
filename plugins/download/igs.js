@@ -8,12 +8,12 @@ exports.run = {
    }) => {
       try {
          if (!args || !args[0]) return client.reply(m.chat, Func.example(isPrefix, command, 'hosico_cat'), m)
-         client.sendReact(m.chat, '🕒', m.key)
+         client.sendReact(m.chat, '⏳', m.key)
          let old = new Date()
          let json = await Api.igs(args[0])
          if (!json.status) return client.reply(m.chat, global.status.fail, m)
          for (let i = 0; i < json.data.length; i++) {
-            client.sendFile(m.chat, json.data[i].url, ``, `🍟 *Fetching* : ${((new Date - old) * 1)} ms (${i+1})`, m)
+            client.sendFile(m.chat, json.data[i].url, ``, `🧸 *Fetching* : ${((new Date - old) * 1)} ms (${i+1})`, m)
             await Func.delay(1500)
          }
          await Func.delay(1500)
