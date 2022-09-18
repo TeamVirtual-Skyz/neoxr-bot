@@ -28,7 +28,7 @@ exports.run = {
          title: '© putra-skyz v2.2.0 (Public Bot)',
          ads: false,
          largeThumb: true,
-         thumbnail: await Func.fetchBuffer('https://telegra.ph/file/d826ed4128ba873017479.jpg')
+         thumbnail: await Func.fetchBuffer('https://telegra.ph/file/8077b1f0806b68541a514.jpg')
       })
    },
    error: false,
