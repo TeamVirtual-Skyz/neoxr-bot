@@ -1,5 +1,5 @@
 // Owner number
-global.owner = '6282141544557'
+global.owner = '+17722223969'
 // Owner name
 global.owner_name = 'Customer Service'
 // Maximum upload file size limit (Default : 250 MB)
@@ -15,14 +15,14 @@ global.evaluate_chars = ['=>', '~>', '<', '>', '$']
 // Country code that will be automatically blocked by the system, when sending messages in private chat
 global.blocks = ['91', '92', '212']
 // Put target jid to forward friends story
-global.forwards = '6282141544557@c.us'
+global.forwards = '+17722223969@c.us'
 // Get neoxr apikey by registering at https://api.neoxr.my.id
 global.Api = new (require('./neoxrApi'))(process.env.API_KEY)
 // Get bid and key configuration for autoreply chat ai feature by registering at https://brainshop.ai
 global.chatai_bid = '164728'
 global.chatai_key = 'MKPsfkgXLZPGrWoH'
 // Footer text
-global.footer = 'ꜱɪᴍᴘʟᴇ ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ᴍᴀᴅᴇ ʙʏ ɴᴇᴏxʀ ッ'
+global.footer = 'ᴡʜᴀᴛꜱᴀᴘᴘ ʙᴏᴛ ʙʏ ᴘᴜᴛʀᴀ ꜱᴋʏᴢ ッ'
 // Global status
 global.status = Object.freeze({
    wait: Func.texted('bold', 'Processed . . .'),
