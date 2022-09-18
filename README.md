@@ -1,14 +1,13 @@
-### 乂  Description
+### ❏ Description 
 
-An automated system (WhatsApp Bot) that can help to do something, search and get data / information only through WhatsApp.
-
+Sistem otomatis (WhatsApp Bot) yang dapat membantu untuk melakukan sesuatu, mencari dan mendapatkan data/informasi hanya melalui WhatsApp.
 <p align="center">
 <img width="" src="https://img.shields.io/github/repo-size/neoxr/neoxr-bot?color=green&label=Repo%20Size&style=for-the-badge&logo=appveyor">
 </p>
 
 > **NEW!** Implementation of my other project namely Github Database **[@neoxr/gitdb](https://github.com/neoxr/gitdb)** to see **[Click Here](https://github.com/neoxr/neoxr-bot/tree/gitdb)**
 
-### 乂  Database Setup
+### ❏ Database Setup
 
 This script can use 2 types of database types NoSQL and SQL, for NoSQL types using MongoDB and SQL using PostgreSQL. 
 
@@ -22,7 +21,7 @@ If you want to get from heroku, register first and do this steps :
 - Search **Heroku Posgress**
 - Choose **Hobby Dev** and **ADD**
 - Go to **Setting**
-- Click **Config Variables**
+- Click **Config Vars**
 - Then copy **DATABASE_URL** value
 - Paste on **.env** file
 - Done!
@@ -58,10 +57,10 @@ Sorry, I can't write the tutorial here because it's a bit complicated so you can
 DATABASE_URL = 'mongodb+srv://neoxrbot:yntkts@cluster0.kontol.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 ```
 
-### 乂  Installation
+### ❏ Installation
 
 ```
-$ git clone https://github.com/neoxr/neoxr-bot
+$ git clone https://github.com/TeamVirtual-skyz/neoxr-bot
 ```
 
 And then type this on your console.
@@ -78,5 +77,5 @@ $ node . <session_name>
 
 <p align="center"><img src="https://profile-counter.glitch.me/{neoxr}/count.svg" alt="neoxr :: Visitor's Count" /></p>
 
-### 乂  License
+### ❏ License
 Copyright (c) 2022 Neoxr . Licensed under the [GNU GPLv3](https://github.com/neoxr/neoxr-bot/blob/master/LICENSE)
