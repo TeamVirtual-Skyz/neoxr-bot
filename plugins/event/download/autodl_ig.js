@@ -16,16 +16,16 @@ exports.run = {
                   let limit = 1
                   if (users.limit >= limit) {
                      users.limit -= limit
-                  } else return client.reply(m.chat, Func.texted('bold', `🚩 Your limit is not enough to use this feature.`), m)
+                  } else return client.reply(m.chat, Func.texted('bold', `🔥 Your limit is not enough to use this feature.`), m)
                }
-               client.sendReact(m.chat, '🕒', m.key)
+               client.sendReact(m.chat, '⏳', m.key)
                let old = new Date()
                Func.hitstat('ig', m.sender)
                links.map(async link => {
                   let json = await Api.ig(Func.igFixed(link))
                   if (!json.status) return client.reply(m.chat, Func.jsonFormat(json), m)
                   json.data.map(async v => {
-                     client.sendFile(m.chat, v.url, '', `🍟 *Fetching* : ${((new Date - old) * 1)} ms`, m)
+                     client.sendFile(m.chat, v.url, '', `🧸 *Fetching* : ${((new Date - old) * 1)} ms`, m)
                      await Func.delay(1500)
                   })
                })
