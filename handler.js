@@ -199,10 +199,10 @@ module.exports = async (client, m) => {
             if (m.isGroup && !['exec'].includes(name) && groupSet.mute) continue
             if (setting.pluginDisable.includes(name)) continue
             if (!m.isGroup && chats && !isPrem && !users.banned && new Date() * 1 - chats.lastchat < global.timer) continue
-            if (!m.isGroup && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `🚩 Using bot in private chat only for premium user, upgrade to premium plan only Rp. 5,000,- to get 1K limits.\n\nIf you want to buy contact *${prefixes[0]}owner*`, m, {
+            if (!m.isGroup && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `🇮🇩 Menggunakan bot obrolan pribadi hanya untuk pengguna premium, tingkatkan ke premium hanya Rp. 5.000,- untuk mendapatkan 1K limit.\n\nIf you want to buy contact *${prefixes[0]}owner*`, m, {
                title: '© neoxr-bot v2.2.0 (Public Bot)',
                largeThumb: true,
-               thumbnail: await Func.fetchBuffer('https://telegra.ph/file/0b32e0a0bb3b81fef9838.jpg'),
+               thumbnail: await Func.fetchBuffer('https://telegra.ph/file/8077b1f0806b68541a514.jpg'),
                url: 'https://chat.whatsapp.com/Dh1USlrqIfmJT6Ji0Pm2pP'
             }).then(() => chats.lastchat = new Date() * 1)
             if (setting.self && !['chatAI', 'exec'].includes(name) && !isOwner && !m.fromMe) continue
