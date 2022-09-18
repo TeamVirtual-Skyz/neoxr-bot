@@ -40,7 +40,7 @@ exports.run = {
          if (args[0] == 1) {
             const data = Object.entries(global.db.users).filter(([_, data]) => data.banned)
             if (data.length == 0) return client.reply(m.chat, Func.texted('bold', `🧸 Empty data.`), m)
-            let teks = `▬❏ *B A N L I S T* ❏▬\n\n`
+            let teks = `❏ *B A N L I S T* ❏\n\n`
             teks += data.map(([jid, _]) => '	◦ @' + jid.replace(/@.+/, '')).join('\n') + '\n\n'
             teks += global.footer
             client.sendMessageModify(m.chat, teks, m, {
@@ -52,7 +52,7 @@ exports.run = {
          } else if (args[0] == 2) {
             const data = global.db.setting.error
             if (data.length == 0) return client.reply(m.chat, Func.texted('bold', `🧸 Empty data.`), m)
-            let teks = `▬❏ *E R R L I S T* ❏▬\n\n`
+            let teks = `❏ *E R R L I S T* ❏\n\n`
             teks += data.map(cmd => '	◦ ' + isPrefix + cmd).join('\n') + '\n\n'
             teks += global.footer
             client.sendMessageModify(m.chat, teks, m, {
@@ -64,7 +64,7 @@ exports.run = {
          } else if (args[0] == 3) {
             const data = global.db.setting.mimic
             if (data.length == 0) return client.reply(m.chat, Func.texted('bold', `🧸 Empty data.`), m)
-            let teks = `▬❏ *M I C L I S T* ❏▬\n\n`
+            let teks = `❏ *M I C L I S T* ❏\n\n`
             teks += data.map(jid => '	◦ @' + jid.replace(/@.+/, '')).join('\n') + '\n\n'
             teks += global.footer
             client.sendMessageModify(m.chat, teks, m, {
@@ -76,7 +76,7 @@ exports.run = {
          } else if (args[0] == 4) {
             const data = global.db.setting.pluginDisable
             if (data.length == 0) return client.reply(m.chat, Func.texted('bold', `🧸 Empty data.`), m)
-            let teks = `▬❏ *P L U G L I S T ❏▬*\n\n`
+            let teks = `❏ *P L U G L I S T ❏*\n\n`
             teks += data.map(plugin => '	◦ ' + plugin + '.js').join('\n') + '\n\n'
             teks += global.footer
             client.sendMessageModify(m.chat, teks, m, {
