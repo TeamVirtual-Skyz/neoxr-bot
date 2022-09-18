@@ -32,7 +32,7 @@ exports.run = {
             welcome: true
          }
       }
-      client.sendList(m.chat, '', `Bot has joined to ${groups.length} groups. 🍟`, '', 'Tap!', [{
+      client.sendList(m.chat, '', `Bot telah bergabung ke ${groups.length} grup. 🧸`, '', 'Tap!', [{
          rows
       }], m)
    },
