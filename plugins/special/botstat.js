@@ -44,7 +44,7 @@ exports.run = {
 }
 
 const statistic = (stats, system) => {
-   return ` *B O T S T A T*
+   return ` ❏ *B O T S T A T*
 
 	◦  ${Func.texted('bold', Func.formatNumber(stats.groups))} Groups Joined
 	◦  ${Func.texted('bold', Func.formatNumber(stats.chats))} Personal Chats
@@ -55,7 +55,7 @@ const statistic = (stats, system) => {
 	◦  ${Func.texted('bold', Func.formatNumber(stats.hitstat))} Commands Hit
 	◦  Runtime : ${Func.texted('bold', stats.uptime)}
 
-乂  *S Y S T E M*
+❏ *S Y S T E M*
 
 	◦  ${Func.texted('bold', system.autodownload ? '[ √ ]' : '[ × ]')}  Auto Download
 	◦  ${Func.texted('bold', system.chatbot ? '[ √ ]' : '[ × ]')}  Chat AI
