@@ -5,31 +5,31 @@ exports.run = {
       isPrefix
    }) => {
       let rows = [{
-         title: 'DOWNLOADER',
+         title: '▬❏ DOWNLOAD ❏▬',
          rowId: `${isPrefix}menutype 1`,
          description: ``
       }, {
-         title: 'GROUP TOOLS',
+         title: '▬❏GROUP TOOLS❏▬',
          rowId: `${isPrefix}menutype 2`,
          description: ``
       }, {
-         title: 'TEXT MAKER',
+         title: '▬❏TEXT MAKER❏▬',
          rowId: `${isPrefix}menutype 3`,
          description: ``
       }, {
-         title: 'USER INFO',
+         title: '▬❏USER INFO❏▬',
          rowId: `${isPrefix}menutype 4`,
          description: ``
       }, {
-         title: 'UTILITIES',
+         title: '▬❏UTILITIES❏▬',
          rowId: `${isPrefix}menutype 5`,
          description: ``
       }, {
-         title: 'OWNER TOOLS',
+         title: '▬❏OWNER TOOLS❏▬',
          rowId: `${isPrefix}menutype 6`,
          description: ``
       }, {
-         title: 'SPECIAL',
+         title: '▬❏SPECIAL❏▬',
          rowId: `${isPrefix}menutype 7`,
          description: ``
       }]
