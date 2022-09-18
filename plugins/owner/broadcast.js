@@ -19,7 +19,7 @@ exports.run = {
                   title: '© putra-skyz v2.2.0 (Public Bot)',
                   thumbnail: await Func.fetchBuffer('https://telegra.ph/file/8077b1f0806b68541a514.jpg'),
                   largeThumb: true,
-                  url: 'https://chat.whatsapp.com/Dh1USlrqIfmJT6Ji0Pm2pP',
+                  url: 'https://chat.whatsapp.com/LS5kykTNIMYH6cyGMii8qk',
                   mentionedJid: command == 'bcgc' ? await (await client.groupMetadata(jid)).participants.map(v => v.id) : []
                })
             }
