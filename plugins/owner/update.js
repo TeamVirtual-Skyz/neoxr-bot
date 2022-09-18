@@ -7,15 +7,15 @@ exports.run = {
       try {
          var stdout = execSync('git pull')
          var output = stdout.toString()
-         if (output.match(new RegExp('Already up to date', 'g'))) return client.reply(m.chat, Func.texted('bold', `🚩 ${output.trim()}`), m)
+         if (output.match(new RegExp('Already up to date', 'g'))) return client.reply(m.chat, Func.texted('bold', `🧸 ${output.trim()}`), m)
          if (output.match(/stash/g)) {
             var stdout = execSync('git stash && git pull')
             var output = stdout.toString()
-            client.reply(m.chat, `🚩 ${output.trim()}`, m).then(async () => {
+            client.reply(m.chat, `🧸 ${output.trim()}`, m).then(async () => {
                await props.save()
                process.send('reset')
             })
-         } else return client.reply(m.chat, `🚩 ${output.trim()}`, m).then(async () => {
+         } else return client.reply(m.chat, `🧸 ${output.trim()}`, m).then(async () => {
             await props.save()
             process.send('reset')
          })
