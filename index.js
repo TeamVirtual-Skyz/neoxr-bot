@@ -27,7 +27,7 @@ if (!process.env.DATABASE_URL) {
       font: 'tiny',
       align: 'center',
       colors: ['system']
-   }), CFonts.say('Github : https://github.com/neoxr/neoxr-bot', {
+   }), CFonts.say('Github : https://github.com/teamvirtual-skyz/neoxr-bot', {
       colors: ['system'],
       font: 'console',
       align: 'center'
