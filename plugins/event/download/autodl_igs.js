@@ -16,7 +16,7 @@ exports.run = {
                   let limit = 1
                   if (users.limit >= limit) {
                      users.limit -= limit
-                  } else return client.reply(m.chat, Func.texted('bold', `🚩 Your limit is not enough to use this feature.`), m)
+                  } else return client.reply(m.chat, Func.texted('bold', `🔥 Your limit is not enough to use this feature.`), m)
                }
                client.sendReact(m.chat, '🕒', m.key)
                let old = new Date()
@@ -25,7 +25,7 @@ exports.run = {
                   let json = await Api.igs(link)
                   if (!json.status) return client.reply(m.chat, `${global.status.fail} : [ @${link.split('/')[4]} ]`, m)
                   for (let i = 0; i < json.data.length; i++) {
-                     client.sendFile(m.chat, json.data[i].url, ``, `🍟 *Fetching* : ${((new Date - old) * 1)} ms (${i+1})`, m)
+                     client.sendFile(m.chat, json.data[i].url, ``, `🧸 *Fetching* : ${((new Date - old) * 1)} ms (${i+1})`, m)
                      await Func.delay(1500)
                   }
                   await Func.delay(1500)
