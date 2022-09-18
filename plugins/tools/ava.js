@@ -5,9 +5,9 @@ exports.run = {
       text
    }) => {
       let number = isNaN(text) ? (text.startsWith('+') ? text.replace(/[()+\s-]/g, '') : (text).split`@` [1]) : text
-      if (!text && !m.quoted) return client.reply(m.chat, Func.texted('bold', `🚩 Mention or reply chat target.`), m)
-      if (isNaN(number)) return client.reply(m.chat, Func.texted('bold', `🚩 Invalid number.`), m)
-      if (number.length > 15) return client.reply(m.chat, Func.texted('bold', `🚩 Invalid format.`), m)
+      if (!text && !m.quoted) return client.reply(m.chat, Func.texted('bold', `🇮🇩 Mention or reply chat target.`), m)
+      if (isNaN(number)) return client.reply(m.chat, Func.texted('bold', `🇮🇩 Invalid number.`), m)
+      if (number.length > 15) return client.reply(m.chat, Func.texted('bold', `🇮🇩 Invalid format.`), m)
       try {
          if (text) {
             var user = number + '@s.whatsapp.net'
@@ -21,7 +21,7 @@ exports.run = {
          try {
             pic = await client.profilePictureUrl(user, 'image')
          } catch {} finally {
-            if (!pic) return client.reply(m.chat, Func.texted('bold', `🚩 He/She didn't put a profile picture.`), m)
+            if (!pic) return client.reply(m.chat, Func.texted('bold', `🇮🇩 He/She didn't put a profile picture.`), m)
             client.sendFile(m.chat, pic, '', '', m)
          }
       }
