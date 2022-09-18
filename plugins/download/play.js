@@ -11,7 +11,7 @@ exports.run = {
    }) => {
       try {
          if (!text) return client.reply(m.chat, Func.example(isPrefix, command, 'lathi'), m)
-         client.sendReact(m.chat, '🕒', m.key)
+         client.sendReact(m.chat, '⏳', m.key)
          const search = await (await yt.searchVideo(text)).videos
          if (!search || search.length == 0) return client.reply(m.chat, global.status.fail, m)
          const {
@@ -29,9 +29,9 @@ exports.run = {
          caption += `	◦  *Bitrate* : 128kbps\n\n`
          caption += global.footer
          let chSize = Func.sizeLimit(filesizeF, global.max_upload)
-         if (chSize.oversize) return client.reply(m.chat, `💀 File size (${filesizeF}) exceeds the maximum limit, download it by yourself via this link : ${await (await scrap.shorten(dl_link)).data.url}`, m)
+         if (chSize.oversize) return client.reply(m.chat, `📚 File size (${filesizeF}) exceeds the maximum limit, download it by yourself via this link : ${await (await scrap.shorten(dl_link)).data.url}`, m)
          client.sendMessageModify(m.chat, caption, m, {
-            title: '© neoxr-bot v2.2.0 (Public Bot)',
+            title: '© putra-skyz v2.2.0 (Public Bot)',
             largeThumb: true,
             thumbnail: await Func.fetchBuffer(thumb)
          }).then(async () => {
