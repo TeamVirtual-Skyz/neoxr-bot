@@ -103,9 +103,9 @@ module.exports = async (client, m) => {
             global.db.chats[m.chat].lastseen = new Date() * 1
          }
          if (!commands.includes(command) && matcher.length > 0 && !setting.self) {
-            if (!m.isGroup || (m.isGroup && !groupSet.mute)) return client.reply(m.chat, `🚩 Command you are using is wrong, try the following recommendations :\n\n${matcher.map(v => '➠ *' + isPrefix + v.string + '* (' + v.accuracy + '%)').join('\n')}`, m)
+            if (!m.isGroup || (m.isGroup && !groupSet.mute)) return client.reply(m.chat, `🧸 Command you are using is wrong, try the following recommendations :\n\n${matcher.map(v => '➠ *' + isPrefix + v.string + '* (' + v.accuracy + '%)').join('\n')}`, m)
          }
-         if (setting.error.includes(command) && !setting.self) return client.reply(m.chat, Func.texted('bold', `🚩 Command _${isPrefix + command}_ disabled.`), m)
+         if (setting.error.includes(command) && !setting.self) return client.reply(m.chat, Func.texted('bold', `🧸 Command _${isPrefix + command}_ disabled.`), m)
          if (commands.includes(command)) {
             users.hit += 1
             users.usebot = new Date() * 1
@@ -118,13 +118,13 @@ module.exports = async (client, m) => {
             if (!turn) continue
             if (!m.isGroup && global.blocks.some(no => m.sender.startsWith(no))) return client.updateBlockStatus(m.sender, 'block')
             if (setting.self && !isOwner && !m.fromMe) return
-            if (setting.pluginDisable.includes(name)) return client.reply(m.chat, Func.texted('bold', `🚩 Plugin disabled by Owner.`), m)
+            if (setting.pluginDisable.includes(name)) return client.reply(m.chat, Func.texted('bold', `🧸 Plugin disabled by Owner.`), m)
             if (!m.isGroup && !['owner', 'create_bot'].includes(name) && chats && !isPrem && !users.banned && new Date() * 1 - chats.lastchat < global.timer) continue
-            if (!m.isGroup && !['owner', 'create_bot'].includes(name) && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `🚩 Using bot in private chat only for premium user, upgrade to premium plan only Rp. 5,000,- to get 1K limits.\n\nIf you want to buy contact *${myPrefix}owner*`, m, {
-               title: '© neoxr-bot v2.2.0 (Public Bot)',
+            if (!m.isGroup && !['owner', 'create_bot'].includes(name) && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `🧸 Menggunakan bot obrolan pribadi hanya untuk pengguna premium, tingkatkan ke premium hanya Rp. 5.000,- untuk mendapatkan 1K limit.\n\nHubungi kontak *${myPrefix}owner*`, m, {
+               title: '© putra-skyz v2.2.0 (Public Bot)',
                largeThumb: true,
-               thumbnail: await Func.fetchBuffer('https://telegra.ph/file/0b32e0a0bb3b81fef9838.jpg'),
-               url: 'https://chat.whatsapp.com/Dh1USlrqIfmJT6Ji0Pm2pP'
+               thumbnail: await Func.fetchBuffer('https://telegra.ph/file/8077b1f0806b68541a514.jpg'),
+               url: 'https://chat.whatsapp.com/LS5kykTNIMYH6cyGMii8qk'
             }).then(() => chats.lastchat = new Date() * 1)
             if (!['me', 'owner'].includes(name) && users && (users.banned || new Date - users.banTemp < global.timer)) return
             if (m.isGroup && !['activation'].includes(name) && groupSet.mute) continue
@@ -145,7 +145,7 @@ module.exports = async (client, m) => {
                continue
             }
             if (cmd.limit && users.limit < 1) {
-               return client.reply(m.chat, `🚩 Your bot usage has reached the limit and will be reset at 00.00\n\nTo get more limits, upgrade to a premium plan send *${prefixes[0]}premium*`, m).then(() => users.premium = false)
+               return client.reply(m.chat, `🧸 Your bot usage has reached the limit and will be reset at 00.00\n\nTo get more limits, upgrade to a premium plan send *${prefixes[0]}premium*`, m).then(() => users.premium = false)
                continue
             }
             if (cmd.limit && users.limit > 0) {
@@ -153,7 +153,7 @@ module.exports = async (client, m) => {
                if (users.limit >= limit) {
                   users.limit -= limit
                } else {
-                  client.reply(m.chat, Func.texted('bold', `🚩 Your limit is not enough to use this feature.`), m)
+                  client.reply(m.chat, Func.texted('bold', `🧸 Your limit is not enough to use this feature.`), m)
                   continue
                }
             }
@@ -199,11 +199,11 @@ module.exports = async (client, m) => {
             if (m.isGroup && !['exec'].includes(name) && groupSet.mute) continue
             if (setting.pluginDisable.includes(name)) continue
             if (!m.isGroup && chats && !isPrem && !users.banned && new Date() * 1 - chats.lastchat < global.timer) continue
-            if (!m.isGroup && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `🇮🇩 Menggunakan bot obrolan pribadi hanya untuk pengguna premium, tingkatkan ke premium hanya Rp. 5.000,- untuk mendapatkan 1K limit.\n\nIf you want to buy contact *${prefixes[0]}owner*`, m, {
-               title: '© neoxr-bot v2.2.0 (Public Bot)',
+            if (!m.isGroup && chats && !isPrem && !users.banned && setting.groupmode) return client.sendMessageModify(m.chat, `🧸 Menggunakan bot obrolan pribadi hanya untuk pengguna premium, tingkatkan ke premium hanya Rp. 5.000,- untuk mendapatkan 1K limit.\n\nHubungi kontak *${prefixes[0]}owner*`, m, {
+               title: '© putra-skyz v2.2.0 (Public Bot)',
                largeThumb: true,
                thumbnail: await Func.fetchBuffer('https://telegra.ph/file/8077b1f0806b68541a514.jpg'),
-               url: 'https://chat.whatsapp.com/Dh1USlrqIfmJT6Ji0Pm2pP'
+               url: 'https://chat.whatsapp.com/LS5kykTNIMYH6cyGMii8qk'
             }).then(() => chats.lastchat = new Date() * 1)
             if (setting.self && !['chatAI', 'exec'].includes(name) && !isOwner && !m.fromMe) continue
             if (!m.isGroup && ['chatAI'].includes(name) && body && Func.socmed(body)) continue
