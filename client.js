@@ -67,7 +67,7 @@ const connect = async () => {
       printQRInTerminal: true,
       markOnlineOnConnect: true,
       msgRetryCounterMap,
-      browser: ['@neoxr / neoxr-bot', 'Chrome', '1.0.0'],
+      browser: ['@TeamVirtual-skyz / putra-skyz', 'Chrome', '1.0.0'],
       auth: state,
       // To see the latest version : https://web.whatsapp.com/check-update?version=1&platform=web
       version: [2, 2232, 8],
