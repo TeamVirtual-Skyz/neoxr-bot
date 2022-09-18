@@ -28,7 +28,7 @@ exports.run = {
          }
          const system = global.db.setting
          client.sendMessageModify(m.chat, statistic(stats, system), m, {
-            title: '© neoxr-bot v2.2.0 (Public Bot)',
+            title: '© putra-skyz v2.2.0 (Public Bot)',
             ads: false,
             largeThumb: true,
             thumbnail: await Func.fetchBuffer('https://telegra.ph/file/d826ed4128ba873017479.jpg')
@@ -44,7 +44,7 @@ exports.run = {
 }
 
 const statistic = (stats, system) => {
-   return `乂  *B O T S T A T*
+   return ` *B O T S T A T*
 
 	◦  ${Func.texted('bold', Func.formatNumber(stats.groups))} Groups Joined
 	◦  ${Func.texted('bold', Func.formatNumber(stats.chats))} Personal Chats
