@@ -5,8 +5,8 @@ exports.run = {
       isPrefix,
    }) => {
       let user = global.db.users[m.sender]
-      if (user.limit < 1) return client.reply(m.chat, `🚩 Your bot usage has reached the limit and will be reset at 00.00\n\nTo get more limits, upgrade to a premium plan send *${isPrefix}premium*`, m)
-      client.reply(m.chat, `🍟 Your limit : [ *${Func.formatNumber(user.limit)}* ]${!user.premium ? `\n\nTo get more limits, upgrade to a premium plan send *${isPrefix}premium*` : ''}`, m)
+      if (user.limit < 1) return client.reply(m.chat, `🧸 Your bot usage has reached the limit and will be reset at 00.00\n\nTo get more limits, upgrade to a premium plan send *${isPrefix}premium*`, m)
+      client.reply(m.chat, `🧸 Your limit : [ *${Func.formatNumber(user.limit)}* ]${!user.premium ? `\n\nTo get more limits, upgrade to a premium plan send *${isPrefix}premium*` : ''}`, m)
    },
    error: false
 }
