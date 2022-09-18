@@ -88,7 +88,7 @@ exports.run = {
          } else if (args[0] == 5) {
             const data = Object.entries(global.db.users).filter(([_, data]) => data.premium)
             if (data.length == 0) return client.reply(m.chat, Func.texted('bold', `🧸 Empty data.`), m)
-            let teks = `▬❏ *P R E M L I S T* ❏▬\n\n`
+            let teks = `❏ *P R E M L I S T* ❏\n\n`
             teks += data.map(([jid, data]) => '	◦ @' + jid.replace(/@.+/, '') + '\n	 *Limit* : ' + Func.formatNumber(data.limit)).join('\n') + '\n\n'
             teks += global.footer
             client.sendMessageModify(m.chat, teks, m, {
@@ -101,11 +101,11 @@ exports.run = {
             if (!isOwner) return client.reply(m.chat, global.status.owner, m)
             const data = Object.entries(global.db.chats).filter(([jid, _]) => jid.endsWith('.net'))
             if (data.length == 0) return client.reply(m.chat, Func.texted('bold', `🧸 Empty data.`), m)
-            let teks = `▬❏ *C H A T L I S T* ❏▬\n\n`
+            let teks = `❏ *C H A T L I S T* ❏\n\n`
             teks += data.sort((a, b) => b[1].lastseen - a[1].lastseen).map(([jid, data]) => '	◦ @' + jid.replace(/@.+/, '') + '\n	     *Chat* : ' + Func.formatNumber(data.chat) + '\n	     *Lastchat* : ' + moment(data.lastseen).format('DD/MM/YY HH:mm:ss')).join('\n') + '\n\n'
             teks += global.footer
             client.sendMessageModify(m.chat, teks, m, {
-               title: '© neoxr-bot v2.2.0 (Public Bot)',
+               title: '© putra-skyz v2.2.0 (Public Bot)',
                ads: false,
                largeThumb: true,
                thumbnail: await Func.fetchBuffer('https://telegra.ph/file/8077b1f0806b68541a514.jpg')
