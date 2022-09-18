@@ -33,12 +33,12 @@ module.exports = (m) => {
       let group = global.db.groups[m.chat]
       if (group) {
          if (!isNumber(group.activity)) group.activity = 0
-         if (!('autoread' in group)) group.autoread = true
+         if (!('autoread' in group)) group.autoread = false
          if (!('antidelete' in group)) group.antidelete = true
          if (!('antilink' in group)) group.antilink = true
          if (!('antivirtex' in group)) group.antivirtex = true
-         if (!('filter' in group)) group.filter = false
-         if (!('left' in group)) group.left = false
+         if (!('filter' in group)) group.filter = true
+         if (!('left' in group)) group.left = true
          if (!('localonly' in group)) group.localonly = false
          if (!('mute' in group)) group.mute = false
          if (!('member' in group)) group.member = {}
@@ -48,11 +48,11 @@ module.exports = (m) => {
       } else {
          global.db.groups[m.chat] = {
             activity: 0,
-            autoread: true,
+            autoread: false,
             antidelete: true,
             antilink: false,
             antivirtex: false,
-            filter: false,
+            filter: true,
             left: false,
             localonly: false,
             mute: false,
