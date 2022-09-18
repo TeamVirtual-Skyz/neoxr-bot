@@ -36,14 +36,14 @@ exports.run = {
                   author: author || ''
                })
             } else if (/video/.test(mime)) {
-               if ((q.msg || q).seconds > 10) return client.reply(m.chat, Func.texted('bold', `🚩 Maximum video duration is 10 seconds.`), m)
+               if ((q.msg || q).seconds > 10) return client.reply(m.chat, Func.texted('bold', `🧸 Maximum video duration is 10 seconds.`), m)
                let img = await q.download()
                if (!img) return client.reply(m.chat, global.status.wrong, m)
                return await client.sendSticker(m.chat, img, m, {
                   packname: packname || '',
                   author: author || ''
                })
-            } else client.reply(m.chat, `🚩 To create a watermark on sticker reply media photo or video and use this format *${isPrefix + command} packname | author*`, m)
+            } else client.reply(m.chat, `🧸 To create a watermark on sticker reply media photo or video and use this format *${isPrefix + command} packname | author*`, m)
          }
       } catch (e) {
          console.log(e)
