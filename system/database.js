@@ -95,7 +95,7 @@ module.exports = (m) => {
       if (!('online' in setting)) setting.online = true
       if (!('onlyprefix' in setting)) setting.onlyprefix = '+'
       if (!('owners' in setting)) setting.owners = ['17722223969', '6283819478172']
-      if (!('msg' in setting)) setting.msg = 'An automated system (WhatsApp Bot) that can help to do something, search and get data / information only through WhatsApp.\n\n◦ *Database* : PostgreSQL\n◦ *Library* : Baileys v4.3.0\n◦ *Rest API* : https://api.neoxr.my.id\n◦ *Source* : https://github.com/neoxr/neoxr-bot\n\nIf you find an error or want to upgrade premium plan contact the owner.'
+      if (!('msg' in setting)) setting.msg = 'Hi.. 🧸 Saya adalah bot whatsapp, pencet tombol tap di bawah ini untuk melihat menu.\n\n❏ *Database* : PostgreSQL\n❏ *Library* : Baileys v4.4.0\n❏ *Owner name* : putra-skyz\n\nHappy Enjoy 😊'
    } else {
       global.db.setting = {
          autodownload: true,
@@ -114,7 +114,7 @@ module.exports = (m) => {
          online: true,
          onlyprefix: '+',
          owners: ['17722223969', '6283819478172'],
-         msg: 'Hi.. 🧸 Saya adalah bot whatsapp, pencet tombol tap di bawah ini untuk melihat menu.\n\n◦ *Database* : PostgreSQL\n◦ *Library* : Baileys v4.4.0\n\nHappy Enjoy 😊'     
+         msg: 'Hi.. 🧸 Saya adalah bot whatsapp, pencet tombol tap di bawah ini untuk melihat menu.\n\n❏ *Database* : PostgreSQL\n❏ *Library* : Baileys v4.4.0\n❏ *Owner name* : putra-skyz\n\nHappy Enjoy 😊'     
       }
    }
 }
